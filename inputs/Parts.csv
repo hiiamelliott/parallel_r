@@ -1,0 +1,72 @@
+Part,Category,Level,Points,Power,Aero,Lightweight,Grip,RD Points,Points/RD
+Bespoke Fuel tank,Lightweight,10,206,,75,131,,9,22.89
+Bespoke Gearbox,Lightweight,10,197,66,,131,,9,21.89
+Ultimate Hybrid Engine,Power,5,188,100,,60,28,10,18.80
+Ultimate Front Wing,Grip,5,188,60,28,,100,10,18.80
+Ultimate Floor Inlet,Aero,4,176,,95,26,55,10,17.60
+Bespoke MGU-K,Power,10,175,116,59,,,9,19.44
+Bespoke Hydraulics,Grip,8,172,,,56,116,7,24.57
+Bespoke Nosecone,Aero,8,169,,85,84,,9,18.78
+Bespoke Airbox,Aero,10,166,66,100,,,8,20.75
+Ultimate Rear Wing Mainplane,Lightweight,3,164,24,50,90,,10,16.40
+Bespoke Wind Tunnel,Spanners,7,162,,80,,82,8,20.25
+Bespoke Wing Mirrors,Grip,9,160,,60,,100,7,22.86
+Redesigned Suspension Arms,Grip,10,151,,,57,94,4,37.75
+Bespoke ECU,Power,7,151,99,,52,,9,16.78
+Bespoke MGU-H,Power,9,148,89,,59,,6,24.67
+Bespoke Engine Cover Vents,Grip,5,141,46,,,95,7,20.14
+Redesigned Intercooler,Lightweight,9,134,,,88,46,5,26.80
+Bespoke Fuel Lab,Spanners,7,128,53,,,75,7,18.29
+Redesigned Exhaust,Lightweight,8,126,49,,77,,4,31.50
+Redesigned Flywheel,Power,7,120,73,47,,,5,24.00
+Redesigned Hybrid Engine,Power,6,111,68,,43,,5,22.20
+Bespoke Fuel Tank Filter,Spanners,5,110,64,,46,,8,13.75
+CFD Testing,Spanners,5,110,,47,63,,7,15.71
+Bespoke Plank Fitting,Lightweight,2,96,,,59,37,6,16.00
+Redesigned Monocoque,Aero,7,94,,94,,,4,23.50
+Redesigned Floor Inlet,Aero,3,91,,55,,36,5,18.20
+Redesigned 3D Undertray,Grip,2,83,,32,,51,5,16.60
+Redesigned Wheel Winglets,Aero,2,82,36,46,,,5,16.40
+Improved Front Wing,Grip,7,81,,33,,48,2,81.00
+Improved Energy Store Cell,Lightweight,7,79,,,52,27,2,39.50
+Improved Pistons,Power,7,79,46,,33,,2,39.50
+Improved Engine Valves,Lightweight,7,79,33,,46,,2,39.50
+Redesigned Electronics,Power,1,76,50,,,26,5,76.00
+Bespoke Engine Cover,Grip,2,74,,18,,56,4,18.50
+Redesigned Combustion Chamber,Lightweight,1,74,,33,41,,5,14.80
+Improved Steering Wheel,Grip,8,72,,,,72,1,72.00
+Ultimate Crank Shaft,Power,1,70,40,10,,20,6,11.67
+Ultimate Rear Wing,Aero,1,70,20,40,,10,6,11.67
+Ultimate Engine Valve,Lightweight,1,70,20,10,40,,6,11.67
+Ultimate Undertray,Grip,1,70,20,,10,40,7,10.00
+Improved Engine Block,Power,1,70,70,,,,1,70.00
+Bespoke Magnetic Compound,Lightweight,1,69,,,69,,6,11.50
+Redesigned Wing Profile,Grip,1,68,25,,,43,4,17.00
+Bespoke Sidepods,Aero,1,67,,50,,17,5,13.40
+Bespoke Diffuser,Aero,1,67,,67,,,6,11.17
+Improved Rear Wing,Aero,7,66,26,40,,,2,66.00
+Bespoke Turbocharger,Power,1,66,66,,,,6,11.00
+Redesigned Suspension Geometry,Grip,2,65,,,,65,3,21.67
+Redesigned Oil Pump,Power,2,64,64,,,,4,64.00
+Redesigned Rear Wing Mainplane,Lightweight,2,63,,,63,,3,21.00
+Tyre Blanket,Spanners,2,61,,,,61,3,20.33
+Redesigned Telemetry Computer,Spanners,2,60,,,27,33,3,60.00
+Improved Roll Dampers,Grip,2,56,,,14,42,2,28.00
+Redesigned Sidepod Turning Vane,Aero,1,55,17,38,,,3,55.00
+Redesigned Wind Tunnel,Spanners,1,54,,29,25,,4,13.50
+Redesigned Aero Rakes,Spanners,1,50,50,,,,4,50.00
+Improved Crank Shaft,Power,1,50,29,,,21,2,50.00
+Improved Wheel Rims,Lightweight,1,50,,21,29,,2,25.00
+Improved DRS Slot Gap,Aero,2,47,,28,,19,2,23.50
+Improved Floor Edge Wings,Aero,2,46,,46,,,2,23.00
+Improved Rolled Wing Tips,Lightweight,2,45,,,45,,1,45.00
+Improved Piston Rings,Power,2,45,27,18,,,2,45.00
+Improved Undertray,Grip,1,42,8,,,34,1,42.00
+Improved Halo,Aero,1,41,,25,16,,2,41.00
+Improved Wheel Gun,Spanners,1,34,,,,34,1,34.00
+Improved Fuel Lab,Spanners,1,33,33,,,,1,33.00
+Improved Cooling Fans,Spanners,1,33,,33,,,1,33.00
+Improved Wing Angle Adjuster,Spanners,1,33,,,33,,1,33.00
+MAX,,10,206,116,100,131,116,10,81
+MEAN,,4,94,50,47,54,51,5,29
+MIN,,1,33,8,10,10,10,1,10
