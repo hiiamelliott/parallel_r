@@ -18,9 +18,9 @@ inputs <- "/repos/parallel_r/inputs/"
 outputs <- "/repos/parallel_r/outputs/"
 
 setups <- fread(paste0(outputs, "setups.csv"))
-cars <- fread(paste0(inputs, "Cars-Table 1.csv"), select = car_cols)
-tps <- fread(paste0(inputs, "Team Principals-Table 1.csv"), select = tp_cols)
-drivers <- fread(paste0(inputs, "Drivers-Table 1.csv"), select = c("Driver", "Points", "RD Points"))
+cars <- fread(paste0(inputs, "Cars.csv"), select = car_cols)
+tps <- fread(paste0(inputs, "Team-Principals.csv"), select = tp_cols)
+drivers <- fread(paste0(inputs, "Drivers.csv"), select = c("Driver", "Points", "RD Points"))
 
 car_setups <- data.frame(matrix(nrow = 0, ncol = length(setup_cols)))
 names(car_setups) <- setup_cols

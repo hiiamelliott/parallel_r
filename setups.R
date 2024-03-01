@@ -5,10 +5,10 @@ part_cols <- c("Part", "Category", "Power", "Aero", "Lightweight", "Grip", "RD P
 combo_cols <- c("Part1", "Part2", "Power", "Aero", "Lightweight", "Grip", "Total", "RD Points")
 setup_cols <- c("Power Part 1", "Power Part 2", "Aero Part 1", "Aero Part 2", "Lightweight Part 1", "Lightweight Part 2", "Grip Part 1", "Grip Part 2", "Spanner Part 1", "Spanner Part 2", "Power", "Aero", "Lightweight", "Grip", "Total", "RD Points")
 
-inputs <- "/domino/datasets/local/parallel_r/inputs/"
-outputs <- "/domino/datasets/local/parallel_r/outputs/"
+inputs <- "/repos/parallel_r/inputs/"
+outputs <- "/repos/parallel_r/outputs/"
 
-parts <- fread(paste0(inputs, "Parts-Table 1.csv"), select = part_cols)
+parts <- fread(paste0(inputs, "Parts.csv"), select = part_cols)
 
 read_parts <- function(category) {
   parts[parts$Category == category] %>% mutate(Power = ifelse(is.na(Power), 0, Power),

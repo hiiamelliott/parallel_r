@@ -5,10 +5,10 @@ driver_setup_cols <- c("Driver", "Team Principal", "Power Part 1", "Power Part 2
 compare_cols <- c("Team", "Driver", "Team Principal", "Power Part 1", "Power Part 2", "Aero Part 1", "Aero Part 2", "Lightweight Part 1", "Lightweight Part 2", "Grip Part 1", "Grip Part 2", "Spanner Part 1", "Spanner Part 2", "Power", "Aero", "Lightweight", "Grip", "Total", "RD Points")
 top_setup_cols <- c("Team", "Total")
 
-inputs <- "/domino/datasets/local/parallel_r/inputs/"
-outputs <- "/domino/datasets/local/parallel_r/outputs/"
+inputs <- "/repos/parallel_r/inputs/"
+outputs <- "/repos/parallel_r/outputs/"
 
-cars <- fread(paste0(inputs, "Cars-Table 1.csv"), select = car_cols)
+cars <- fread(paste0(inputs, "Cars.csv"), select = car_cols)
 
 top_setups <- data.frame(matrix(nrow = 0, ncol=length(top_setup_cols)))
 names(top_setups) <- top_setup_cols
