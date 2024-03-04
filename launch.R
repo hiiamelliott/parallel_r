@@ -6,7 +6,7 @@ library(data.table)
 api_proxy <- Sys.getenv("DOMINO_API_PROXY")
 project_id = Sys.getenv("DOMINO_PROJECT_ID")
 
-hardware_tiers <- fread("/repos/parallel_r/job_hardware_tiers.csv", header = FALSE)
+hardware_tiers <- fread("/mnt/code/job_hardware_tiers.csv", header = FALSE)
 for (row in 1:nrow(hardware_tiers)){
   # Call Domino's REST API via the API proxy to launch jobs
   # The API proxy is available in Domino workspaces and jobs
