@@ -44,12 +44,14 @@ Instead, we can use one of the `launch` scripts to request that Domino runs `aio
 `launch.R` demonstrates making calls to Domino's REST API to achieve the same result.  
 Running the jobs in step 2 in parallel, it's reasonable to expect this to reduce the time for the whole process down from 1 hour to around 15 minutes.
 
-As all of the jobs take the same amount of time, they should roughly stop at the same time.  
+As all of the jobs take the same amount of time, they should stop at roughly the same time.  
 However, in a case where some jobs took longer than others, the servers running the shorter jobs would shut down as they finish, leaving only the longer jobs running.  
-This frees up resources for other tasks and reducing costs vs running one, large server for everything. 
+This frees up resources for other tasks and reducing costs compared with running one, large server for everything. 
 
 ### Custom Hardware Tiers
-Again, as all of the jobs in our demo are identical, they would take the same amount of time and require the same amount of server resources.  
+Again, as all of the jobs in our demo are identical, they would require the same amounts of server resources.  
 However, a feature was built into the `launch` scripts in the demo that reads in a CSV of Domino hardware tier names and IDs.  
 More demanding jobs could run on larger servers, while less demanding jobs can run on smaller hardware tiers, using resources more efficiently.
 
+The jobs running `aio.R` in the demo run on different sized hardware tiers, but take the same amount of time because they are single-threaded.   
+Using a package like `mclapply` might allow R scripts to be multi-threaded, using multiple processors at the same time, and providing better performance on more powerful hardware tiers.
