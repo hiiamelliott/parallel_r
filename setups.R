@@ -5,8 +5,11 @@ part_cols <- c("Part", "Category", "Power", "Aero", "Lightweight", "Grip", "RD P
 combo_cols <- c("Part1", "Part2", "Power", "Aero", "Lightweight", "Grip", "Total", "RD Points")
 setup_cols <- c("Power Part 1", "Power Part 2", "Aero Part 1", "Aero Part 2", "Lightweight Part 1", "Lightweight Part 2", "Grip Part 1", "Grip Part 2", "Spanner Part 1", "Spanner Part 2", "Power", "Aero", "Lightweight", "Grip", "Total", "RD Points")
 
-inputs <- "/repos/parallel_r/inputs/"
-outputs <- "/repos/parallel_r/outputs/"
+project_name <- Sys.getenv("DOMINO_PROJECT_NAME")
+# Note: these are the paths to a Git-based project's dataset
+# A Domino File System project's dataset is at /domino/datasets/local/<project_name>
+inputs <- paste0("/mnt/data/", project_name, "/inputs/")
+outputs <- paste0("/mnt/data/", project_name, "/outputs/")
 
 parts <- fread(paste0(inputs, "Parts.csv"), select = part_cols)
 
@@ -167,6 +170,8 @@ new_setup <- function(power_combo, aero_combo, lw_combo, grip_combo, spanner_com
   return(newsetup)
 }
 
+# Setting a maximum number of combos
+# A larger number of combos significantly increases compute time and data without improving the results.
 combos <- 7
 system.time(
   for (power_combo in 1:combos) {

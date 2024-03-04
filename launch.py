@@ -1,8 +1,12 @@
 import csv
+import os
 from domino import Domino
+
+project = str(os.environ['DOMINO_PROJECT_OWNER'] + "/" + os.environ['DOMINO_PROJECT_NAME'])
+
 # Tell Domino which project to start the jobs in in the format "<username>/<project_name>"
 # https://docs.dominodatalab.com/en/latest/api_guide/c5ef26/the-python-domino-library/#_example
-domino = Domino("elliott_whiting/parallel_r")
+domino = Domino(project)
 
 with open("./job_hardware_tiers.csv", 'r') as f:
     hardware_tiers_csv = csv.reader(f)

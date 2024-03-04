@@ -14,8 +14,11 @@ tp_cols <- c("Principal", "Power", "Aero", "Lightweight", "Grip", "RD Points")
 tp_setup_cols <- c("Team Principal", "Power Part 1", "Power Part 2", "Aero Part 1", "Aero Part 2", "Lightweight Part 1", "Lightweight Part 2", "Grip Part 1", "Grip Part 2", "Spanner Part 1", "Spanner Part 2", "Power", "Aero", "Lightweight", "Grip", "Total", "RD Points")
 driver_setup_cols <- c("Driver", "Team Principal", "Power Part 1", "Power Part 2", "Aero Part 1", "Aero Part 2", "Lightweight Part 1", "Lightweight Part 2", "Grip Part 1", "Grip Part 2", "Spanner Part 1", "Spanner Part 2", "Power", "Aero", "Lightweight", "Grip", "Total", "RD Points")
 
-inputs <- "/repos/parallel_r/inputs/"
-outputs <- "/repos/parallel_r/outputs/"
+project_name <- Sys.getenv("DOMINO_PROJECT_NAME")
+# Note: these are the paths to a Git-based project's dataset
+# A Domino File System project's dataset is at /domino/datasets/local/<project_name>
+inputs <- paste0("/mnt/data/", project_name, "/inputs/")
+outputs <- paste0("/mnt/data/", project_name, "/outputs/")
 
 setups <- fread(paste0(outputs, "setups.csv"))
 cars <- fread(paste0(inputs, "Cars.csv"), select = car_cols)

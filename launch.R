@@ -8,7 +8,8 @@ project_id = Sys.getenv("DOMINO_PROJECT_ID")
 
 hardware_tiers <- fread("/repos/parallel_r/job_hardware_tiers.csv", header = FALSE)
 for (row in 1:nrow(hardware_tiers)){
-  # Call Domino's REST API- via the API proxy- to launch jobs
+  # Call Domino's REST API via the API proxy to launch jobs
+  # The API proxy is available in Domino workspaces and jobs
   # https://docs.dominodatalab.com/en/latest/api_guide/8c929e/rest-api-reference/#_startJob
   httr::POST(paste0(api_proxy, '/api/jobs/v1/jobs'),
               accept_json(),
