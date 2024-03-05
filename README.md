@@ -7,13 +7,13 @@ A project to illustrate how multiple R scripts can be run in parallel in Domino.
 
 In general, distributed compute is a great way to pool the memory and processing resources from multiple machines, to improve the performance of running multiple tasks at the same time.  
 Domino supports workloads that connect to distributed compute frameworks, such as Dask, Ray, Spark, and OpenMPI.   
-It also supports autoscaling distributed compute clusters, meaning that it can start up servers as demand for resources rises, and shut them down as demand falls. 
+Domino also supports autoscaling distributed compute clusters, meaning that it can start up servers as demand for resources rises, and shut them down as demand falls. 
 
 This has the joint benefits of:
 1. Reducing waiting times for tasks that could be running in parallel.
-2. Reducing costs compared to running 1 large server with the capacity to run all of the tasks in parallel, which then sits underutilised as the shorter tasks end.
+2. Reducing costs compared to running 1 large server with the capacity to run all the tasks in parallel, which then sits underutilised as the shorter tasks end.
 
-However, R has fewer binaries that allow the use of distribute compute frameworks than Python.  
+However, R has fewer binaries that allow the use of distributed compute frameworks than Python.  
 Also, distributed compute frameworks have specific applications and can't be used for everything.  
 So what can we do in Domino to support multiple R tasks running in parallel in Domino?
 
