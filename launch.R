@@ -14,19 +14,33 @@ for (row in 1:nrow(hardware_tiers)){
   httr::POST(paste0(api_proxy, '/api/jobs/v1/jobs'),
               accept_json(),
               body = list(
-                runCommand = paste("aio.R", toString(row), sep = " "), 
-                projectId = project_id,
+                #commitId = "960a4c99a4cc38194cbacbcce41caa68ba5369ea",
+                #computeCluster = list(
+                  #clusterType = "dask",
+                  #computeEnvironmentId = "623139857a0af0281c01a6a4",
+                  #computeEnvironmentRevisionSpec = "ActiveRevision | LatestRevision | SomeRevision(623131577a0af0281c01a69a)",
+                  #masterHardwareTierId = "medium-k8s",
+                  #maxWorkerCount = 10,
+                  #workerCount = 4,
+                  #workerHardwareTier = "large-k8s",
+                  #workerStorageMB = 5
+                #),
+                #environmentId = "623131507a0af0281c01a699",
+                #environmentRevisionSpec = "ActiveRevision | LatestRevision | SomeRevision(623131577a0af0281c01a69a)",
+                #externalVolumeMountIds = array(
+                  #"6231327c7a0af0281c01a69b",
+                  #"623132867a0af0281c01a69c"
+                #),
                 # Domino's REST API accepts hardware tiers' *ID* only
                 hardwareTier = toString(hardware_tiers[row, 3]),
+                #mainRepoGitRef = list(
+                  #refType = "head | commitId | tags | branches",
+                  #value = "my-test-branch"
+                #),
+                projectId = project_id,
+                runCommand = paste("aio.R", toString(row), sep = " "),
+                #snapshotDatasetsOnCompletion = false,
                 title = paste("Parallel R", toString(row), sep = " ")
-                #commitId = None,
-                #computeCluster = None,
-                #environmentId = None,
-                #environmentRevisionSpec = None,
-                #externalVolumeMountIds = None,
-                #mainRepoGitRef = None,
-                #snapshotDatasetsOnCompletion = False,
-                ),
+              ),
               encode = "json")
 }
-
