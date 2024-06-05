@@ -4,7 +4,7 @@ library(curlconverter)
 library(data.table)
 
 api_proxy <- Sys.getenv("DOMINO_API_PROXY")
-project_id = Sys.getenv("DOMINO_PROJECT_ID")
+project_id <- Sys.getenv("DOMINO_PROJECT_ID")
 
 hardware_tiers <- fread("/mnt/code/job_hardware_tiers.csv", header = FALSE)
 for (row in 1:nrow(hardware_tiers)){
@@ -17,8 +17,8 @@ for (row in 1:nrow(hardware_tiers)){
                 runCommand = paste("aio.R", toString(row), sep = " "), 
                 projectId = project_id,
                 # Domino's REST API accepts hardware tiers' *ID* only
-                hardwareTier = toString(hardware_tiers[row, 3])),
-                title = paste("Parallel R", toString(row), sep = " "),
+                hardwareTier = toString(hardware_tiers[row, 3]),
+                title = paste("Parallel R", toString(row), sep = " ")
                 #commitId = None,
                 #computeCluster = None,
                 #environmentId = None,
@@ -26,6 +26,7 @@ for (row in 1:nrow(hardware_tiers)){
                 #externalVolumeMountIds = None,
                 #mainRepoGitRef = None,
                 #snapshotDatasetsOnCompletion = False,
-                encode = "json")
+                ),
+              encode = "json")
 }
 
